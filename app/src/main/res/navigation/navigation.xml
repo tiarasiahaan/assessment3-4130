@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/hitungFragment">
+
+    <fragment
+        android:id="@+id/hitungFragment"
+        android:name="org.d3if4130.hitungnilaiakhir.ui.hitung.HitungFragment"
+        android:label="Hitung Jitu Nilai"
+        tools:layout="@layout/fragment_hitung">
+        <action
+            android:id="@+id/action_hitungFragment_to_aboutFragment"
+            app:destination="@+id/about_fragment">
+        </action>
+        <action
+            android:id="@+id/action_hitungFragment_to_historiFragment"
+            app:destination="@+id/histori_fragment">
+        </action>
+        <action
+            android:id="@+id/action_hitungFragment_to_saranFragment"
+            app:destination="@id/saranFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/about_fragment"
+        android:name="org.d3if4130.hitungnilaiakhir.ui.AboutFragment"
+        android:label="@string/tentang_aplikasi"
+        tools:layout="@layout/fragment_about">
+    </fragment>
+
+    <fragment
+        android:id="@+id/histori_fragment"
+        android:name="org.d3if4130.hitungnilaiakhir.ui.histori.HistoriFragment"
+        android:label="@string/tentang_aplikasi"
+        tools:layout="@layout/item_histori">
+    </fragment>
+
+    <fragment
+        android:id="@+id/saranFragment"
+        android:name="org.d3if4130.hitungnilaiakhir.ui.saran.SaranFragment"
+        tools:layout="@layout/fragment_saran">
+        <argument
+            android:name="kategori"
+            app:argType="org.d3if4130.hitungnilaiakhir.model.KategoriNilai" />
+    </fragment>
+</navigation>
